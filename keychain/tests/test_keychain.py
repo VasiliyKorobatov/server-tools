@@ -193,9 +193,8 @@ class TestKeychain(TransactionCase):
                 self.assertTrue(
                     False,
                     'Should not validate baddly formatted json')
-            self.assertTrue(
-                'Data should be a valid JSON' in str(err.exception),
-                'It should raise a ValidationError')
+            self.true = self.assertTrue('Data should be a valid JSON' in str(err.exception),
+                                        'It should raise a ValidationError')
 
     def test_invalid_json(self):
         """It should raise an exception when data don't pass _validate_data."""
